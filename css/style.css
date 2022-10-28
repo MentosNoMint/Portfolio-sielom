@@ -1,0 +1,210 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amatic SC';
+}
+body {
+    opacity: 0;
+    animation: ani 4s forwards;
+  }
+  
+  @keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+.wrapper {
+    background-image: url("/img/background\ 1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.ramka-5 {
+    position: relative;
+    z-index: 0;
+    width: 750px;
+    height: 920px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+  
+}
+.ramka-5::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #BFE2FF;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(#BFE2FF, #BFE2FF), linear-gradient(#00d9fc, #00d9ff), linear-gradient(#BFE2FF, #BFE2FF), linear-gradient(#00d9ff, #00d9ff);
+    animation: anim-ramka-5 4s linear infinite;
+}
+.ramka-5::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: white;
+    border-radius: 5px;
+}
+@keyframes anim-ramka-5 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+.text-header {
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+@keyframes go-left-right {
+    from { left: 0px; }             
+    to { left: calc(2% - 1.5px); } 
+  }
+
+  .cloud-1{
+    animation: go-left-right 3s infinite alternate;
+   
+    position: absolute;
+    width:  135px;
+    height: 100px;
+    top: -140px;
+    left: 50px;
+    margin: 220px;
+  }
+  @keyframes go-left-right-2 {
+    from { left: 0px; }             
+    to { left: calc(3% - 1px); } 
+  }
+  .cloud-2{
+    
+    animation: go-left-right-2 4s infinite alternate;
+    position: absolute;
+    width:  135px;
+    height: 100px;
+    top: 100px;
+    left: 200px;
+  }
+  .cloud-3 {
+    animation: go-left-right-2 4s infinite alternate;
+    position: absolute;
+    width:  135px;
+    height: 100px;
+    top: -1260px;
+    left: 200px;
+    margin: 1300px;
+  }
+  .cloud-4 {
+    animation: go-left-right 3s infinite alternate;
+    position: absolute;
+    width:  135px;
+    height: 100px;
+    top: -1450px;
+    left: 200px;
+    margin: 1600px;
+  }
+  @keyframes light {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    .light{
+        position: absolute;
+        opacity: 0;
+        animation: light 2s alternate;
+        animation-iteration-count : infinite;
+        left: 200px;
+        top: 200px;
+    }
+    .light-2
+    {
+        position: absolute;
+        opacity: 0;
+        animation: light 2s alternate;
+        animation-iteration-count : infinite;
+        left: 400px;
+        top: 80px;
+    }
+    .light-3
+    {
+        position: absolute;
+        opacity: 0;
+        animation: light 2s alternate;
+        animation-iteration-count : infinite;
+        left: 1700px;
+        top: 90px;
+    }
+    .light-4
+    {
+        position: absolute;
+        opacity: 0;
+        animation: light 2s alternate;
+        animation-iteration-count : infinite;
+        left: 1556px;
+        top: 76px;
+    }
+    .text-ops {
+       margin-left: 20px;
+       font-size: 40px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      margin-top: 0px;
+    }
+    .detals {
+    margin-left: 30px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+     margin-top: 15px;
+    }
+    details[open] div {
+      animation: spoiler 1s;
+    }
+    @keyframes spoiler {
+      0%   {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    details summary {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      transition: color .3s;  
+      cursor: pointer;  
+    }
+    details summary:hover,
+    details[open] summary {
+      color: FireBrick;
+    }
+    
+details summary::after {
+content: "Открыть";
+}
+details[open] summary::after {
+content: "Закрыть";
+}
+
+
+
+
+
+    
+  
+
